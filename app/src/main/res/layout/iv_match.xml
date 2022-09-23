@@ -1,0 +1,287 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="100dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="#1c2023">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="30dp"
+        android:layout_height="match_parent"
+        android:background="#5481fe"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <View
+            android:id="@+id/view_summoner_lose"
+            android:layout_width="30dp"
+            android:layout_height="match_parent"
+            android:background="#ed6160"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:visibility="gone"/>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/tv_fight_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="15:30"
+                android:textColor="@color/white"
+                android:textSize="7dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"/>
+
+            <View
+                android:id="@+id/v_time_bar"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:background="#325fdc"
+                app:layout_constraintBottom_toTopOf="@+id/tv_fight_time"
+                android:layout_marginBottom="2dp"/>
+
+            <TextView
+                android:id="@+id/tv_match_history_isWin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="승"
+                android:textSize="7dp"
+                android:textColor="@color/white"
+                app:layout_constraintBottom_toTopOf="@id/v_time_bar"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                android:layout_marginBottom="2dp"/>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cl_summoner_item"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:layout_marginLeft="50dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginBottom="10dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent">
+
+        <com.makeramen.roundedimageview.RoundedImageView
+            android:id="@+id/iv_summoner_item_slot1"
+            android:layout_width="30dp"
+            android:layout_height="match_parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:riv_corner_radius="20dp"/>
+
+
+        <com.makeramen.roundedimageview.RoundedImageView
+            android:id="@+id/iv_summoner_item_slot2"
+            android:layout_width="30dp"
+            android:layout_height="match_parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:riv_corner_radius="20dp"
+            app:layout_constraintLeft_toRightOf="@+id/iv_summoner_item_slot1" />
+
+        <com.makeramen.roundedimageview.RoundedImageView
+            android:id="@+id/iv_summoner_item_slot3"
+            android:layout_width="30dp"
+            android:layout_height="match_parent"
+            app:riv_corner_radius="20dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toRightOf="@+id/iv_summoner_item_slot2" />
+
+        <com.makeramen.roundedimageview.RoundedImageView
+            android:id="@+id/iv_summoner_item_slot4"
+            android:layout_width="30dp"
+            android:layout_height="match_parent"
+            app:riv_corner_radius="20dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toRightOf="@+id/iv_summoner_item_slot3" />
+
+        <com.makeramen.roundedimageview.RoundedImageView
+            android:id="@+id/iv_summoner_item_slot5"
+            android:layout_width="30dp"
+            android:layout_height="match_parent"
+            app:riv_corner_radius="20dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toRightOf="@+id/iv_summoner_item_slot4" />
+
+        <com.makeramen.roundedimageview.RoundedImageView
+            android:id="@+id/iv_summoner_item_slot6"
+            android:layout_width="30dp"
+            android:layout_height="match_parent"
+            app:riv_corner_radius="20dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toRightOf="@+id/iv_summoner_item_slot5" />
+
+        <com.makeramen.roundedimageview.RoundedImageView
+            android:id="@+id/iv_summoner_sub_item"
+            android:layout_width="30dp"
+            android:layout_height="match_parent"
+            app:riv_corner_radius="20dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toRightOf="@+id/iv_summoner_item_slot6" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent">
+
+            <TextView
+                android:id="@+id/tv_multi_kill"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="쿼드라킬"
+                android:padding="3dp"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:textSize="10dp"
+                android:textColor="#b34f4f"
+                android:textStyle="bold"
+                android:background="@drawable/kill_text_round"/>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginLeft="50dp"
+        android:layout_marginRight="15dp"
+        app:layout_constraintBottom_toTopOf="@+id/cl_summoner_item">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/cl_summoner_champ_icon"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent">
+
+            <com.makeramen.roundedimageview.RoundedImageView
+                android:id="@+id/iv_summoner_champ_icon"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop"
+                app:riv_corner_radius="30dp"
+                android:src="@drawable/summoner_champ_icon"/>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <ImageView
+            android:id="@+id/iv_summoner_spell2"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:src="@drawable/summoner_spell_flash"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toRightOf="@id/cl_summoner_champ_icon"
+            android:layout_marginBottom="5dp"
+            android:scaleType="centerCrop"/>
+
+        <ImageView
+            android:id="@+id/iv_summoner_spell1"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            app:layout_constraintBottom_toTopOf="@+id/iv_summoner_spell2"
+            app:layout_constraintLeft_toRightOf="@id/cl_summoner_champ_icon"
+            android:layout_marginBottom="1dp"
+            android:src="@drawable/summoner_spell_smite"
+            android:scaleType="centerCrop"/>
+
+        <ImageView
+            android:id="@+id/iv_summoner_sub_rune"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:src="@drawable/summoner_spell_sub_rune"
+            app:layout_constraintLeft_toRightOf="@+id/iv_summoner_spell1"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginBottom="5dp"/>
+
+        <ImageView
+            android:id="@+id/iv_summoner_main_rune"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            app:layout_constraintBottom_toTopOf="@+id/iv_summoner_spell2"
+            app:layout_constraintLeft_toRightOf="@id/iv_summoner_spell1"
+            android:layout_marginBottom="1dp"
+            android:src="@drawable/summoner_spell_main_rune"/>
+
+        <TextView
+            android:id="@+id/tv_summoner_kda"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintLeft_toRightOf="@id/iv_summoner_main_rune"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginLeft="10dp"
+            android:text="3/2/17"
+            android:layout_marginTop="1dp"
+            android:textSize="22dp"
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:id="@+id/tv_kill_participation"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/tv_summoner_kda"
+            app:layout_constraintLeft_toRightOf="@+id/iv_summoner_sub_rune"
+            android:textSize="10dp"
+            android:text="킬 관여 "
+            android:layout_marginLeft="10dp"
+            android:textColor="#8f949a"/>
+
+        <TextView
+            android:id="@+id/tv_rank_type"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:text="자유 랭크"
+            android:textSize="11dp"
+            android:textColor="#78818a"
+            android:layout_marginTop="3dp"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:id="@+id/tv_last_play_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_rank_type"
+            android:text="14시간 전"
+            android:textSize="11dp"
+            android:layout_marginTop="1dp"
+            android:textColor="#78818a"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -7,7 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import com.example.myapplication.R
 
-class SettingFragment : Fragment(){
+class SettingFragment : Fragment() {
 
     override fun onCreateView(
         inflater: LayoutInflater,

@@ -2,10 +2,9 @@ package com.example.myapplication.Model
 
 import android.content.Context
 import android.content.SharedPreferences
-import com.example.myapplication.Activity.Url
+import com.example.myapplication.Activity.MyApplication
 import com.google.gson.Gson
 import com.google.gson.reflect.TypeToken
-import java.util.*
 
 class PreferenceUtil(context: Context) {
     private val prefs: SharedPreferences = context.getSharedPreferences("my_pref", Context.MODE_PRIVATE)
@@ -28,7 +27,7 @@ class PreferenceUtil(context: Context) {
     }
 
     fun clearSummonerList() {
-        prefs.edit().remove(Url.summonerListPrefKey).commit()
+        prefs.edit().remove(MyApplication.summonerListPrefKey).commit()
     }
 }
 

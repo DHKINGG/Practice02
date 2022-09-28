@@ -22,6 +22,7 @@
            app:layout_constraintBottom_toBottomOf="parent">
 
            <com.makeramen.roundedimageview.RoundedImageView
+               android:id="@+id/iv_search_summoner_icon"
                android:layout_width="match_parent"
                android:layout_height="match_parent"
                android:src="@drawable/search_summoner_icon"
@@ -39,7 +40,7 @@
        </androidx.constraintlayout.widget.ConstraintLayout>
 
        <ImageView
-           android:id="@+id/search_delete"
+           android:id="@+id/btn_search_delete"
            android:layout_width="17dp"
            android:layout_height="17dp"
            android:src="@drawable/search_summoner_delete_icon0"
@@ -50,15 +51,15 @@
            android:layout_marginRight="10dp"/>
 
        <ImageView
-           android:id="@+id/search_like"
+           android:id="@+id/btn_search_favorite"
            android:layout_width="17dp"
            android:layout_height="17dp"
            android:src="@drawable/search_summoner_like_icon"
-           app:layout_constraintRight_toRightOf="@+id/search_delete"
+           app:layout_constraintRight_toRightOf="@+id/btn_search_delete"
            app:layout_constraintBottom_toBottomOf="parent"
            app:layout_constraintTop_toTopOf="parent"
            android:scaleType="centerCrop"
-           android:layout_marginRight="25dp" />
+           android:layout_marginRight="25dp"/>
 
 
        <com.makeramen.roundedimageview.RoundedImageView

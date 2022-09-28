@@ -4,6 +4,12 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Activity.MyApplication">
+    tools:context=".Activity.SummonerMatchHistoryActivity">
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_match_history"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
